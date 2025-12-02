@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Produtos de Festa</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-area">
+                <i data-lucide="file-spreadsheet"></i>
+                <div>
+                    <h1>Gestor de Produtos de Festa</h1>
+                    <p>Organização do catálogo</p>
+                </div>
+            </div>
+            <button onclick="downloadCSV()" class="btn-download">
+                <i data-lucide="download"></i> Baixar Tabela (CSV)
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <nav class="sidebar" id="sidebar">
+            </nav>
+
+        <main class="content">
+            <div class="table-header">
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <i data-lucide="package" id="current-icon"></i>
+                    </div>
+                    <h2 id="category-title">Categoria</h2>
+                </div>
+                <span class="badge" id="item-count">0 itens</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Item / Produto</th>
+                            <th>Tipo</th>
+                            <th style="text-align: right;">Custo (R$)</th>
+                            <th style="text-align: right;">Venda (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
